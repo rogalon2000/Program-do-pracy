@@ -1,20 +1,20 @@
 c = 5
 d = 6
 
-funkcja = function(evt)
+funkcja = function()
     {
         console.log("uruchomiłeś przycisk nr 1");
-        console.log(evt.target)
-        console.log(evt.type)
     }
 
-function funkcja2()
+function funkcja2(argument1, argument2)
     {
+        wynik = argument1+argument2;
         console.log("uruchomiłeś przycisk nr 2");
+        console.log(wynik)
     }
 
-let a = document.querySelector("#poradnia");
-a.addEventListener("click", funkcja)
+let poradnia = document.querySelector("#poradnia");
+poradnia.addEventListener("click", funkcja)
 
-let b = document.querySelector("#przyjecie");
-b.addEventListener("click", funkcja2)
+let przyjecie = document.querySelector("#przyjecie");
+przyjecie.addEventListener("click", funkcja2(c, d))
