@@ -1,22 +1,43 @@
-c = 5
-d = 6
 
-funkcja = function()
+
+przyciskPoradnia = function()
     {
-        console.log("uruchomiłeś przycisk nr 1");
+        console.log("uruchomiłeś przycisk od poradni");
+        let a = document.querySelector('#main1')
+        a.style.gridColumn = '1/span 4'
+        a.style.visibility = 'visible'
+        let b = document.querySelector('#main2')
+        b.style.visibility = 'hidden'
     }
 
-function funkcja2(argument1, argument2)
+przyciskPrzyjecie = function()
     {
-        wynik = argument1+argument2;
-        console.log("uruchomiłeś przycisk nr 2");
-        console.log(wynik)
+        console.log("uruchomiłeś przycisk od przyjecia");
+        let a = document.querySelector('#main1')
+        a.style.visibility = 'hidden'
+        let b = document.querySelector('#main2')
+        b.style.gridColumn = '1/span 4'
+        b.style.visibility = 'visible'
     }
 
 let poradnia = document.querySelector("#poradnia");
-poradnia.addEventListener("click", funkcja)                 /* to się uruchamia grzecznie po klinięciu przycisku */
+poradnia.addEventListener("click", przyciskPoradnia)
 
 let przyjecie = document.querySelector("#przyjecie");
-przyjecie.addEventListener("click", funkcja2(c, d))         /* to mi się uruchamia przy ładowaniu strony, zamiast po klinięciu przycisku */
+przyjecie.addEventListener("click", przyciskPrzyjecie)
 
-/* jak mam zrobić, żeby kliknięcie przycisku uruchamiało funkcję, która przyjmuje jakieś argumenty? */
+generujPlikiPoradnia = function()
+    {
+        console.log('rozpoczynam generowanie plikow')
+
+/* tu będzie funkcja służąca do wygenerowania zgód pacjentów na bazie template'a
+po pobraniu danych pacjenta z pliku excel? albo prostszego - wtedy będzie jeszcze funkcja
+do konwersji z excela do prostszych
+*/
+
+
+
+    }
+
+let generuj = document.querySelector('#generujPlikiPoradnia');
+generuj.addEventListener('click', generujPlikiPoradnia)

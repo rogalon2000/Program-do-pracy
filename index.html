@@ -8,18 +8,51 @@
   <body>
 
     <h1>Program do przygotowywania dokumentów</h1>
-    <p1>
-      Program daje możliwość przygotowania dokumentów dla listy pacjentów do poradni 
-      lub listy dokumentów dla pojedynczego pacjenta przyjmowanego do OIT.
-    </p1>
-    <br>
-    <hr>
-    <p2>
+    <div class="grid-container">
+    <p2 class="grid-item", id="part1">
       <button id="poradnia">Papiery poradni</button>
     </p2>
-    <p3>
+    <p3 class="grid-item", id="part2">
       <button id="przyjecie">Papiery przyjęciowe</button>
     </p3>
+    
+      <div class="grid-item", id="main1"> PRZYGOTOWANIE DOKUMENTÓW DO PORADNI
+          <p class="menu">
+            Data:
+            <input type="date">
+          </p>
+          <p class="menu">
+            Dane lekarza (imię, nazwisko, nr pwz):
+            <input type="text">
+          </p>
+          <p class="menu">
+            Lista pacjentów w pliku excel:
+            <input type="file">
+          </p>
+          <p>
+            <button id="generujPlikiPoradnia">Wygeneruj Pliki</button>
+          </p>
+      </div>
+
+
+
+      <div class="grid-item", id="main2"> PRZYGOTOWANIE DOKUMENTÓW PRZYJĘCIOWYCH DO OIT
+        <p class="menu">
+          Data:
+          <input type="date">
+        </p>
+        <p class="menu">
+          Dane lekarza (imię, nazwisko, nr pwz):
+          <input type="text">
+        <p class="menu">
+          Imię i nazwisko pacjenta:
+          <input type="text">
+        <p class="menu">
+          PESEL pacjenta:
+          <input type="text">
+
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 
