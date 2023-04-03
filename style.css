@@ -71,6 +71,14 @@ button:hover, button:focus {
 	grid-row: 3/ span 4;
 }
 
-#generujPliki{
+#generujPlikiPoradnia{
 	width:300px
+}
+
+#generujPlikiPrzyjecie{
+	width:300px
+}
+
+#dane {
+	visibility: visible;
 }
