@@ -1,4 +1,5 @@
 body {
+	background-color: rgb(188, 188, 188);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
@@ -45,7 +46,7 @@ button:hover, button:focus {
   
 .grid-item {
 	padding: 20px;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
   }
 
@@ -69,16 +70,36 @@ button:hover, button:focus {
 	visibility: hidden;
 	grid-column: 1/ span 4;
 	grid-row: 3/ span 4;
+	display: grid;
+	grid-auto-columns: 50%;
 }
 
-#generujPlikiPoradnia{
-	width:300px
+#main205{
+	grid-column: 1/ span 2;
+	grid-row: 1/ span 1;
+}
+
+#main21{
+	grid-column: 1/ span 2;
+	grid-row: 2/ span 1;
+}
+
+#main22{
+	grid-column: 2/ span 1;
+	grid-row: 2/ span 1;
+}
+
+#main23{
+	grid-column: 1/ span 2;
+	grid-row: 3/ span 1;
 }
 
 #generujPlikiPrzyjecie{
 	width:300px
 }
 
-#dane {
-	visibility: visible;
+#generujPlikiPoradnia{
+	width:300px
 }
+
+

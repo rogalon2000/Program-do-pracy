@@ -3,21 +3,7 @@ let peselPacjenta =''
 let daneLekarza =''
 let data=''
 
-/*
-let showHide = function(){
-    let a = document.querySelector('#dane');
-    if (imieNazwiskoPacjenta ==='' && peselPacjenta ==='' && daneLekarza ==='' && data ==='')
-        {
-        a.style.visibility = 'hidden'
-        console.log('dupa')
-        }
-    else
-        {
-        a.style.visibility = 'visible'
-        }
-    }
 
-*/
 przyciskPoradnia = function()
     {
         console.log("uruchomiłeś przycisk od poradni");

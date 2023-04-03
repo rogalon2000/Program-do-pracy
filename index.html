@@ -9,67 +9,88 @@
 
     <h1>Program do przygotowywania dokumentów</h1>
     <div class="grid-container">
-    
-    <!--TUTAJ JEST CZEŚĆ STRONY ODPOWIADAJĄCA ZA PORADNIĘ-->
-    <p2 class="grid-item", id="part1">
-      <button id="poradnia">Papiery poradni</button>
-    </p2>
-    <p3 class="grid-item", id="part2">
-      <button id="przyjecie">Papiery przyjęciowe</button>
-    </p3>
-    
-      <div class="grid-item", id="main1"> PRZYGOTOWANIE DOKUMENTÓW DO PORADNI
-          <p class="menu">
-            Data:
-            <input 
-              type="date"
-              oninput="getValue(this, 4)">
-          </p>
-          <p class="menu">
-            Dane lekarza (imię, nazwisko, nr pwz):
-            <input 
-              type="text"
-              oninput="getValue(this, 3)">
-          </p>
-          <p class="menu">
-            Lista pacjentów w pliku excel:
-            <input type="file"
-            >
-          </p>
-          <p>
-            <button id="generujPlikiPoradnia">Wygeneruj Pliki</button>
-          </p>
-      </div>
+            
+      <p2 class="grid-item", id="part1">
+        <button id="poradnia">Papiery poradni</button>
+      </p2>
+      <p3 class="grid-item", id="part2">
+        <button id="przyjecie">Papiery przyjęciowe</button>
+      </p3>
 
-    <!--TUTAJ JEST CZEŚĆ STRONY ODPOWIADAJĄCA ZA PRZYJĘCIE DO OIT-->
+            <!--TUTAJ JEST CZEŚĆ STRONY ODPOWIADAJĄCA ZA PORADNIĘ-->
 
-      <div class="grid-item", id="main2"> PRZYGOTOWANIE DOKUMENTÓW PRZYJĘCIOWYCH DO OIT
-        
-        <p class="menu">
-          Data:
-          <input 
-            type="date"
-            oninput="getValue(this, 4)">
-        </p>
-        <p class="menu">
-          Dane lekarza (imię, nazwisko, nr pwz):
-          <input 
-            type="text"
-            oninput="getValue(this, 3)">
-        <p class="menu">
-          Imię i nazwisko pacjenta:
-          <input 
-            type="text"
-            oninput="getValue(this, 1)">
-        <p class="menu">
-          PESEL pacjenta:
-          <input 
-            type="text"
-            oninput="getValue(this, 2)">
-        <p>
-          <button id="generujPlikiPrzyjecie">Wygeneruj Pliki</button>
-        </p>
-      </div>
+            <div class="grid-item", id="main1">
+              <p>PRZYGOTOWANIE DOKUMENTÓW DO PORADNI</p>
+                  <p class="menu">
+                    Data:
+                    <input 
+                      type="date"
+                      oninput="getValue(this, 4)">
+                  </p>
+                  <p class="menu">
+                    Dane lekarza (imię, nazwisko, nr pwz):
+                    <input 
+                      type="text"
+                      oninput="getValue(this, 3)">
+                  </p>
+                  <p class="menu">
+                    Lista pacjentów w pliku excel:
+                    <input type="file"
+                    >
+                  </p>
+                  <p>
+                    <button id="generujPlikiPoradnia">Wygeneruj Pliki</button>
+                  </p>
+            </div>
+
+            <!--TUTAJ JEST CZEŚĆ STRONY ODPOWIADAJĄCA ZA PRZYJĘCIE DO OIT-->
+
+            <div class="grid-item", id="main2"> 
+              <p id="main205">PRZYGOTOWANIE DOKUMENTÓW PRZYJĘCIOWYCH DO OIT</p>
+
+                <div id="main21">
+                  <p class="menu">
+                    Data:
+                    <input 
+                      type="date"
+                      oninput="getValue(this, 4)">
+                  </p>
+                  <p class="menu">
+                    Dane lekarza (imię, nazwisko, nr pwz):
+                    <input 
+                      type="text"
+                      oninput="getValue(this, 3)">
+                  <p class="menu">
+                    Imię i nazwisko pacjenta:
+                    <input 
+                      type="text"
+                      oninput="getValue(this, 1)">
+                  <p class="menu">
+                    PESEL pacjenta:
+                    <input 
+                      type="text"
+                      oninput="getValue(this, 2)">
+                </div>
+
+                <div id="main22">
+                      checklista dokumentów
+                      <br>
+                      aaaa
+                      <br>
+                      aaaaa
+                      <br>
+                      aaaa
+                      <br>
+                      aaaaa
+                      <br>
+                      aaaa
+                      <br>
+                      aaaaa
+                </div>
+                <p id="main23">  
+                  <button id="generujPlikiPrzyjecie">Wygeneruj Pliki</button>
+                </p>
+            </div>
     </div>
 
     <div id="dane">
