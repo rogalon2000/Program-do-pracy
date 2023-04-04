@@ -72,7 +72,21 @@ let getValue = function(field, mod)
     console.log(wartosc);
     }
 
+checkAll = function()
+{
+    boxy = document.getElementsByClassName('checkboxy')
+    if (boxy[0].checked === true)
+        {
+        for(let i=1; i<boxy.length;i++){
+        boxy[i].checked = true}
+        }
+    if (boxy[0].checked === false)
+        {
+        for(let i=1; i<boxy.length;i++){
+        boxy[i].checked = false}
+        }
 
+}
 
 
 
