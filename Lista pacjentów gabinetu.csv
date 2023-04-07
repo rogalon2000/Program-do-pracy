@@ -1,0 +1,15 @@
+﻿Lista pacjentów gabinetu;
+Wygenerowano dnia ;06-04-2023 11:39
+
+Status;Data planowana;Nazwisko;Imiona;PESEL;Jednostka kierująca;Lekarz kierujący;Data zlec.;Data wykonania
+Zaplanowane;07-04-2023  08:15;a;b;" 99887712345";Poradnia chirurgii ogólnej;OLENDER PIOTR (nr prawa: 1770920);21-06-2022  13:05;
+Zaplanowane;07-04-2023  08:45;c;d;" 99887712345";Poradnia chirurgii ogólnej;DUDZIK JACEK (nr prawa: 1989431);15-07-2022  10:34;
+Zaplanowane;07-04-2023  09:00;e;f;" 99887712345";;;05-04-2023  09:04;
+Zaplanowane;07-04-2023  09:15;g;h;" 99887712345";Poradnia chirurgii ogólnej;OLENDER PIOTR (nr prawa: 1770920);30-08-2022  09:15;
+Zaplanowane;07-04-2023  09:45;i;j;" 99887712345";Poradnia chirurgii ogólnej;FRANAS WIESŁAW (nr prawa: 8179590);05-09-2022  12:21;
+Zaplanowane;07-04-2023  10:15;k;l;" 99887712345";Poradnia chirurgii ogólnej;WAJMAN SŁAWOMIR (nr prawa: 2641367);21-09-2022  10:23;
+Zaplanowane;07-04-2023  10:45;m;n;" 99887712345";Poradnia chirurgii naczyniowej;PŁOŃSKI ANDRZEJ  (nr prawa: 8711301);30-01-2023  12:23;
+Zaplanowane;07-04-2023  11:15;o;p;" 99887712345";;;13-02-2023  11:18;
+Zaplanowane;07-04-2023  11:45;r;s;" 99887712345";Poradnia chirurgii ogólnej;WAJMAN SŁAWOMIR (nr prawa: 2641367);22-02-2023  11:32;
+Zaplanowane;07-04-2023  12:15;t;u;" 99887712345";Poradnia chirurgii naczyniowej;TROCHIMCZUK MARCIN (nr prawa: 3716875);08-03-2023  15:24;
+Zaplanowane;07-04-2023  12:45;v;w;" 99887712345";;;13-03-2023  13:26;

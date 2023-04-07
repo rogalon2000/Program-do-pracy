@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.36.1/docxtemplater.js"></script>
+    <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip-utils.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>Przygotowanie dokumentów</title>
   </head>
   <body>
@@ -33,11 +38,11 @@
                       type="text"
                       oninput="getValue(this, 3)">
                   </p>
-                  <p class="menu">
-                    Lista pacjentów w pliku excel:
-                    <input type="file"
-                    >
-                  </p>
+                  <form class="menu" id ='myForm'>
+                    Lista pacjentów w pliku csv:
+                    <input type="file" id="csvFile" accept=".csv"/> 
+                    <input type="submit" value="Zatwierdź" />
+                  </form>
                   <p>
                     <button id="generujPlikiPoradnia">Wygeneruj Pliki</button>
                   </p>

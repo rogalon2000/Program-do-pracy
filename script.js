@@ -2,6 +2,7 @@ let imieNazwiskoPacjenta = ''
 let peselPacjenta =''
 let daneLekarza =''
 let data=''
+let listaPacjentowGabinetu = []
 
 
 przyciskPoradnia = function()
@@ -69,7 +70,6 @@ let getValue = function(field, mod)
         else {a.innerHTML='Data: ' + field.value}
         }
     let wartosc = field.value;
-    console.log(wartosc);
     }
 
 checkAll = function()
@@ -88,37 +88,115 @@ checkAll = function()
 
 }
 
+// część skryptu odpowiedzialna za przeczytanie pliku csv z listą i danymi pacjentów
+
+    const myForm = document.getElementById("myForm");
+    const csvFile = document.getElementById("csvFile");
+  
+    myForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      console.log("Dane zatwierdzone");
+      const input = csvFile.files[0];
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const text = event.target.result;
+        const data = csvToArray(text);
+        listaPacjentowGabinetu = data
+      };
+      reader.readAsText(input);
+      });
+
+
+    function csvToArray(str, delimiter = ";") {
+
+        str = str.substring(63,)    //obcinam niepotrzebną część pliku csv, która jest generowana z AMMSa
+        const headers = str.slice(0, str.indexOf("\n")).split(delimiter);    //obcinam piewszy rząd i dzielę go na elementy rozdzielone ";" to są nagłówki
+
+        const rows = str.slice(str.indexOf("\n") + 1).split('\n'); //od \n czyli od końca nagłówków dzielę plik na kolejne liniki i otrzymuję zbiór linijek
+
+        let pacjenci = []                                    //pacjenci to array
+
+        for(let wiersz = 0; wiersz < rows.length; wiersz++)   //biorę po kolei każdą linijkę i...
+        {
+          let pacjent = {}                                    //pacjent jest objektem
+          const element = rows[wiersz].split(delimiter);     // dzielę go na pojedyncze elementy z tabeli i następnie
+          for(let el = 0; el < element.length; el++)          // iteruję po elementach wpisując je w formie nagłówek:wartość jako kolejne objekty zbioru pacjenci
+          {                                                   // jako kolejne objekty zbioru pacjenci
+            pacjent[headers[el]] = element[el]
+          }
+          pacjenci.push(pacjent)
+        }
+
+      
+      return pacjenci
+      }
 
 
 
 
 
+function loadFile(url, callback) {
+    PizZipUtils.getBinaryContent(url, callback);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-generujPlikiPoradnia = function()
-    {
-        console.log('rozpoczynam generowanie plikow do poradni')
-
+window.generate = function generate()
 /* tu będzie funkcja służąca do wygenerowania zgód pacjentów na bazie template'a
 po pobraniu danych pacjenta z pliku excel? albo prostszego - wtedy będzie jeszcze funkcja
 do konwersji z excela do prostszych
 */
+{
+    
+for(let i=0;listaPacjentowGabinetu[i];i++)
+    {
+    let pacjent=listaPacjentowGabinetu[i]
+//        console.log('imie ' + pacjent.Imiona)
+//        console.log('nazwisko ' + pacjent.Nazwisko)
 
+    loadFile(
+        "/templates/formularz.docx",
+        function (error, content) 
+            {
+            if (error) 
+                {
+                throw error;
+                }
+            var zip = new PizZip(content);
+            var doc = new window.docxtemplater(zip, 
+                {
+                paragraphLoop: true,
+                linebreaks: true,
+                });
+            doc.render(
+                {
+                imie: pacjent.Imiona,
+                nazwisko: pacjent.Nazwisko,
+                PESEL: pacjent.PESEL,
+                daneLekarza: daneLekarza,
+                data: data
+                });
+                
+            var blob = doc.getZip().generate({
+                type: "blob",
+                mimeType:
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                compression: "DEFLATE",
+            });
+            // Output the document using Data-URI
+          saveAs(blob, pacjent.Imiona +' '+ pacjent.Nazwisko +'.docx');
+            }
+            );
     }
+};
 
 let generuj = document.querySelector('#generujPlikiPoradnia');
-generuj.addEventListener('click', generujPlikiPoradnia)
+generuj.addEventListener('click', generate)
+
+
+
+
+
+
+
 
 
 
